@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 from .models import Menu, Item, Ingredient
 from .forms import MenuForm
 
+# Run tests with "python manage.py test"
 
 menu_data1 = {
     'season': 'Summer',
