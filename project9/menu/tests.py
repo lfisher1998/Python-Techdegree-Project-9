@@ -7,6 +7,7 @@ from .models import Menu, Item, Ingredient
 from .forms import MenuForm
 
 # Run tests with "python manage.py test"
+# Check coverage with "coverage report"
 
 menu_data1 = {
     'season': 'Summer',
