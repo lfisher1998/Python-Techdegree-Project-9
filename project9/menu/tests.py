@@ -10,12 +10,12 @@ from .forms import MenuForm
 # Check coverage with "coverage report"
 
 menu_data1 = {
-    'season': 'Summer',
+    'season': 'Fall',
     'expiration_date': '2020-03-20'
 }
 
 menu_data2 = {
-    'season': 'Winter',
+    'season': 'Spring',
     'expiration_date': '2020-06-20'
 }
 
@@ -26,11 +26,11 @@ class MenuViewsTest(TestCase):
             email='testemail@gmail.com',
             password='testing'
         )
-        ingredient1 = Ingredient(name='chocolate')
+        ingredient1 = Ingredient(name='vanilla')
         ingredient1.save()
-        ingredient2 = Ingredient(name='strawberry')
+        ingredient2 = Ingredient(name='cherries')
         ingredient2.save()
-        ingredient3 = Ingredient(name='banana')
+        ingredient3 = Ingredient(name='grapefruit')
         ingredient3.save()
         self.item1 = Item(
             name='Item 1',
@@ -70,7 +70,7 @@ class MenuViewsTest(TestCase):
 class MenuModelTest(TestCase):
     def test_menu_creation(self):
         menu = Menu.objects.create(**menu_data1)
-        self.assertEqual(menu.season, 'Summer')
+        self.assertEqual(menu.season, 'Fall')
 
 
 
