@@ -24,6 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '-gs+&x$kl3g_*zop(9hi6p-u5nscicrymm6k%^!zu3(3ii4&iz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# Comment these lines when running tests
 DEBUG_TOOLBAR_PATCH_SETTINGS = False
 DEBUG = True
 
@@ -108,6 +109,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
+# Comment these two lines when running tests
 # Django Debug Toolbar Settings
 INTERNAL_IPS = '127.0.0.1'
 DEBUG_TOOLBAR_CONFIG = {
