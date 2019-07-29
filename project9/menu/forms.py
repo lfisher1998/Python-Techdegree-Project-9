@@ -8,13 +8,13 @@ class MenuForm(forms.ModelForm):
     expiration_date = forms.DateTimeField(
                             input_formats=['%Y-%m-%d', '%m/%d/%Y', '%m/%d/%y'],
                             widget=forms.SelectDateWidget(
-                                years=range(2017,2021)
+                                years=range(2020,2025)
                             )
     )
 
     class Meta:
         model = Menu
-        exclude = ('created_date',)
+        fields = ('season', 'items', 'expiration_date')
 
     def clean(self):
         data = self.cleaned_data
